@@ -14,3 +14,21 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// select on button
+const turnBulbOn = document.getElementById("turnBulbOn");
+// select off butt
+const turnBulbOff = document.getElementById("turnBulbOff");
+// select bulb image
+const bulbImage = document.getElementById("lightbulb");
+
+// add event listener to turn on bulb
+turnBulbOn.addEventListener("click", () => {
+  // change bulb image to on
+  bulbImage.src = "light-bulb-on.png";
+});
+// add event listener to turn off bulb
+turnBulbOff.addEventListener("click", () => {
+  // change bulb image to off
+  bulbImage.src = "light-bulb-off.png";
+});
