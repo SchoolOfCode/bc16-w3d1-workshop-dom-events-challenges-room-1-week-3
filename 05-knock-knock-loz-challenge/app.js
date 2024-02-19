@@ -30,7 +30,7 @@ function handleDoorClick() {
   const randomIndex = Math.floor(Math.random() * doors.length);
 
   if (!doorsOpen) {
-    doors.forEach((door, index) => {
+    doors.forEach((door) => {
       door.src = "door-open-empty.png";
       doors[randomIndex].src = "door-open-loz.png";
     })
