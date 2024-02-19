@@ -13,3 +13,24 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+// 1 select the slider
+// 2. select the stars div
+// 3. select the stars element
+// 4. add event lister to the slider element
+// 5. add stars depending on value of slider
+
+const slider = document.getElementById("starSlider");
+const starsDiv = document.getElementById("stars");
+// const starElement = document.querySelector(".star-icon");
+
+// console.log(starElement);
+
+slider.addEventListener("input", () => {
+  starsDiv.innerHTML = "";
+  for (let i = 0; i < slider.value; i++) {
+    const newStarElement = document.createElement("span");
+    newStarElement.className = "star-icon";
+    newStarElement.textContent = "★";
+    starsDiv.appendChild(newStarElement);
+  }
+});
