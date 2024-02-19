@@ -13,3 +13,36 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// 1. Assign all needed elements to variables
+// 2. Create event listener for click on door and call handler function
+// 3. Assign random number to variable
+// 4. Check if door is open
+// 5a. if yes, Set doors src to open-empty
+// 5b. if no, set doors src to closed
+// 6. Set src to loz on random door using random index
+
+const doors = document.querySelectorAll(".door");
+let doorsOpen = false;
+
+
+function handleDoorClick() {
+  const randomIndex = Math.floor(Math.random() * doors.length);
+
+  if (!doorsOpen) {
+    doors.forEach((door, index) => {
+      door.src = "door-open-empty.png";
+      doors[randomIndex].src = "door-open-loz.png";
+    })
+    doorsOpen = true;
+  } else {
+    doors.forEach((door) => {
+    door.src = "door-closed.png";
+    })
+    doorsOpen = false;
+  }
+}
+
+doors.forEach((door) => {
+  door.addEventListener("click", handleDoorClick);
+})
