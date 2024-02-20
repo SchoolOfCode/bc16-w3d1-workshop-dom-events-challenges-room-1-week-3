@@ -14,16 +14,28 @@ Expected Outcomes:
 
 // Place your plan and solution below!
 
+// 1. get both doors as a node list [node, node]
+const doorList = document.querySelectorAll(".door");
+// console.log(doorList);
+let doorOpen = false
+
 // 3. function to do stuff.
 function openDoor() {
   let randomNum = Math.floor(Math.random() * doorList.length);
-  let imageArray = ["door-open-empty.png", "door-open-loz.png"];
-  doorList.forEach((door) => /* add a random door */)
+  
+  if (!doorOpen) {
+    doorList.forEach((door) => {
+      door.src = 'door-open-empty.png'
+    })
+     doorList[randomNum].src = "door-open-loz.png";
+     doorOpen = true;
+  } else {
+    doorList.forEach((door) => {
+      door.src = 'door-closed.png'
+    })
+    doorOpen = false
+  }
 }
-
-// 1. get both doors as a node list [node, node]
-const doorList = document.querySelectorAll(".door");
-console.log(doorList);
 
 // 2. add event listener click to both
 doorList.forEach((door) => {
