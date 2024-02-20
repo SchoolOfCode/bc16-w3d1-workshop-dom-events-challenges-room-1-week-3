@@ -18,7 +18,7 @@ h3Element.textContent = "I'm a blue h3!";
 h3Element.style.color = "blue";
 
 // div
-divElement.setAttribute("style", "background: pink; border: 1px solid black ");
+divElement.setAttribute("style", "background: pink; border: 1px solid black; ");
 
 // h1
 h1Element.textContent = "I'm in a div.";
@@ -30,4 +30,3 @@ container.appendChild(h3Element);
 divElement.appendChild(h1Element);
 divElement.appendChild(par2Element);
 container.appendChild(divElement);
-// 5. repeat for the other elements
