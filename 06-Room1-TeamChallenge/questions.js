@@ -110,43 +110,43 @@ export const questions = [
       answer: "Yen"
     },
     {
-        question: "What is the fastest land animal?",
-        options: ["Cheetah", "Lion", "Horse", "Greyhound"],
-        answer: "Cheetah"
-      },
-      {
-        question: "Who discovered penicillin?",
-        options: ["Alexander Fleming", "Marie Curie", "Louis Pasteur", "Joseph Lister"],
-        answer: "Alexander Fleming"
-      },
-      {
-        question: "What is the main ingredient in guacamole?",
-        options: ["Avocado", "Tomato", "Onion", "Pepper"],
-        answer: "Avocado"
-      },
-      {
-        question: "What gas do plants absorb from the atmosphere for photosynthesis?",
-        options: ["Carbon Dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
-        answer: "Carbon Dioxide"
-      },
-      {
-        question: "In which country is the Great Barrier Reef located?",
-        options: ["Australia", "USA", "Mexico", "Philippines"],
-        answer: "Australia"
-      },
-      {
-        question: "What is the name of the largest ocean on Earth?",
-        options: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
-        answer: "Pacific Ocean"
-      },
-      {
-        question: "Who was the first woman to win a Nobel Prize?",
-        options: ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Dorothy Hodgkin"],
-        answer: "Marie Curie"
-      },
-      {
-        question: "What is the capital of Canada?",
-        options: ["Ottawa", "Toronto", "Vancouver", "Montreal"],
-        answer: "Ottawa"
-      }
+      question: "What is the fastest land animal?",
+      options: ["Cheetah", "Lion", "Horse", "Greyhound"],
+      answer: "Cheetah"
+    },
+    {
+      question: "Who discovered penicillin?",
+      options: ["Alexander Fleming", "Marie Curie", "Louis Pasteur", "Joseph Lister"],
+      answer: "Alexander Fleming"
+    },
+    {
+      question: "What is the main ingredient in guacamole?",
+      options: ["Avocado", "Tomato", "Onion", "Pepper"],
+      answer: "Avocado"
+    },
+    {
+      question: "What gas do plants absorb from the atmosphere for photosynthesis?",
+      options: ["Carbon Dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+      answer: "Carbon Dioxide"
+    },
+    {
+      question: "In which country is the Great Barrier Reef located?",
+      options: ["Australia", "USA", "Mexico", "Philippines"],
+      answer: "Australia"
+    },
+    {
+      question: "What is the name of the largest ocean on Earth?",
+      options: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+      answer: "Pacific Ocean"
+    },
+    {
+      question: "Who was the first woman to win a Nobel Prize?",
+      options: ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Dorothy Hodgkin"],
+      answer: "Marie Curie"
+    },
+    {
+      question: "What is the capital of Canada?",
+      options: ["Ottawa", "Toronto", "Vancouver", "Montreal"],
+      answer: "Ottawa"
+    }
 ];
