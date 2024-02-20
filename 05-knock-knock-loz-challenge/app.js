@@ -41,3 +41,31 @@ function openDoor() {
 doorList.forEach((door) => {
   door.addEventListener("click", openDoor);
 });
+
+
+// POTENTIAL IMPROVEMENT USING TERNARY OPERATOR
+// // 1. get both doors as a node list [node, node]
+// const doorList = document.querySelectorAll(".door");
+// // console.log(doorList);
+// let doorOpen = false
+
+// // 3. function to do stuff.
+// function openDoor() {
+//   if (!doorOpen) {
+//     let randomNum = Math.floor(Math.random() * doorList.length);
+//     doorList.forEach((door,index) => {
+//       door.src = index === randomNum ? "door-open-loz.png" : "door-open-empty.png";
+//     })
+//      doorOpen = true;
+//   } else {
+//     doorList.forEach((door) => {
+//       door.src = 'door-closed.png'
+//     })
+//     doorOpen = false
+//   }
+// }
+
+// // 2. add event listener click to both
+// doorList.forEach((door) => {
+//   door.addEventListener("click", openDoor);
+// });
