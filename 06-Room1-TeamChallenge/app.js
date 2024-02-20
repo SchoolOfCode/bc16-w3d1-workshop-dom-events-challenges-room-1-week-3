@@ -50,11 +50,12 @@ let score = 0;
 const numOfQuestions = 5;
 
 // ** Outer function to run 5 times related to quiz . length.
+//  need to keep track of question count here. in order to select the right question from quizzQuestions.
 
-// ** clear all the html nodes uncomment line below **
+// ** clear all the html nodes uncomment line below when finished **
 // questionContainer.innerHTML = "";
 
-// 2. function to generate 5 random questions 5 should be a global variable. so it can change.
+// 2. function to generate 5 random questions
 function generateQuestions() {
   // shuffle quiz object then just select first 5 numbers
   const shuffledQuestions = shuffleArray(questions);
@@ -65,6 +66,7 @@ function generateQuestions() {
   return fiveQuestionArray;
 }
 
+// The Fisher-Yates algorithm
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -75,13 +77,40 @@ const shuffleArray = (array) => {
   return array;
 };
 
-console.log(generateQuestions());
+// testing
+// console.log(generateQuestions());
 
 // 2. store quiz question objects in a new array.
+const quizQuestions = generateQuestions();
 
 // 3. function to build nodes.
-// 3. build one ul outside of the loop + attributes
-// 3. function should loop 4 times corresponding to number of questions. build Li, inputs and labels. add attributes. need a unique variable naming system. name attr on input needs to change with loop iteration.
+function buildNode() {
+  // build one ul outside of the loop + attributes
+  const ulNode = document.createElement("ul");
+  ulNode.className = "question__options";
+
+  const optionsLength = quizQuestions[0].options.length;
+  // loop 4 times corresponding to number of questions.
+  for (let i = 0; i < optionsLength; i++) {
+    // create the nodes
+    const liNode = document.createElement("li");
+    const inputNode = document.createElement("input");
+    const labelNode = document.createElement("label");
+
+    // set the attributes must - don't need an ID
+    inputNode.setAttribute("id", `option${i}`);
+    inputNode.setAttribute("type", "radio");
+    inputNode.setAttribute("name", "question1");
+    // ****** THIS WONT WORK YET STOPPED HERE FOR NIGHT. 22:18 20th
+    inputNode.setAttribute("value", `quizQ`);
+
+    // append children to li node
+
+    // append li to ul node
+  }
+  //   build Li, inputs and labels. add attributes. need a unique variable naming system. name attr on input needs to change with loop iteration.
+}
+
 // 3. start appending elements inside out. this can be done in the for loop.
 // li > input and label
 // ul > li, li ,li, li  this one could be a loop.
