@@ -15,9 +15,8 @@
 // the correct answer and display your result in the result div element.
 // example: 5/5 correct!
 // **bonus:**
-// Instead of choosing some questions to use, instead allow the code to do the
-// work for you and have it select 5 random questions every time the quiz is
-// laoded.
+// 1) Instead of choosing some questions to use, code it to pick 5 random
+// questions when the quiz is generated.
 
 import { questions } from "./questions.js";
 
