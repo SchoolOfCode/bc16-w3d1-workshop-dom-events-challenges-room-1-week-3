@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js" defer></script>
+</head>
+<body>
+    <h2>Pub Quiz</h2>
+    <form id="quizForm" class="quiz__container">
+        <div class="question__container">
+            <div class="question__title">Question text here</div>
+            <ul class="question__options">
+                <li>
+                    <input id="example1" type="radio" name="question1" value="Example1">
+                    <label for="example1">Example 1</label>
+                </li>
+                <li>
+                    <input id="example2" type="radio" name="question1" value="Example2">
+                    <label for="example2">Example 2</label>
+                </li>
+                <li>
+                    <input id="example3" type="radio" name="question1" value="Example3">
+                    <label for="example3">Example 3</label>
+                </li>
+                <li>
+                    <input id="example4" type="radio" name="question1" value="Example4">
+                    <label for="example4">Example 4</label>
+                </li>
+            </ul>
+        </div>
+        <button>Submit</button>
+    </form>
+    <div id="result">5/5 Correct!</div>
+</body>
+</html>

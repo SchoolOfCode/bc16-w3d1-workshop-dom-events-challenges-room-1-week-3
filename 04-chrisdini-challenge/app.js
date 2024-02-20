@@ -16,17 +16,12 @@ Hint: You can achieve this in multiple ways e.g. via the opacity or style proper
 
 // Place your plan and solution below!
 
-// 3. create function that toggles opacity to 0 and back
+const chris = document.getElementById("chrisImage");
 
-// 1. Select the image element
-const chrisImg = document.getElementById("chrisImage");
-console.log(chrisImg);
+chris.addEventListener("mouseover", () => {
+  chris.style.opacity = "0";
+});
 
-// 2. add event listener to img mouseover.
-document.addEventListener("mouseover", (event) => {
-  if (event.target === chrisImg) {
-    chrisImg.style.opacity = 0;
-  } else {
-    chrisImg.style.opacity = 1;
-  }
+chris.addEventListener("mouseout", () => {
+  chris.style.opacity = "1";
 });
