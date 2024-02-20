@@ -34,14 +34,49 @@
 // 1) display a play again button after the result is shown, which refreshes the quiz with new questions so the player can try again.
 
 import { questions } from "./questions.js";
-console.log(questions);
+// console.log(questions);
 
 // 1. select nodes ** question container and submit button create score variable to 0. select result div.
 
+const questionContainer = document.querySelector(".question__container");
+const submitButton = document.querySelector("button");
+const resultDiv = document.getElementById("result");
+
+// console.log(questionContainer);
+// console.log(submitButton);
+// console.log(resultDiv);
+
+let score = 0;
+const numOfQuestions = 5;
+
 // ** Outer function to run 5 times related to quiz . length.
 
+// ** clear all the html nodes uncomment line below **
+// questionContainer.innerHTML = "";
+
 // 2. function to generate 5 random questions 5 should be a global variable. so it can change.
-// 2. function should shuffle quiz object then just select first 5 numbers
+function generateQuestions() {
+  // shuffle quiz object then just select first 5 numbers
+  const shuffledQuestions = shuffleArray(questions);
+  const fiveQuestionArray = [];
+  for (let i = 0; i < numOfQuestions; i++) {
+    fiveQuestionArray[i] = shuffledQuestions[i];
+  }
+  return fiveQuestionArray;
+}
+
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+};
+
+console.log(generateQuestions());
+
 // 2. store quiz question objects in a new array.
 
 // 3. function to build nodes.
