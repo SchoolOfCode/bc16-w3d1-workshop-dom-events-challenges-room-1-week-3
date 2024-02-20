@@ -1,6 +1,6 @@
 // Learning Objectives:
 // 1) Build upon the skills you've already worked on
-// - DOM Manipulationm,
+// - DOM Manipulation,
 // - Looping,
 // - Utilising and manipulating Data Structures,
 // - Altering the styles of the page
@@ -11,7 +11,7 @@
 // dynamically fill out the quiz and return an answer
 // ---------------------------
 // Expected Outcome:
-// 1) Initially there is an example question structure in the HTML, your script should only fill the pub quiz sheet with relevant questions from the question data you've been providied.
+// 1) Initially there is an example question structure in the HTML, your script should only fill the pub quiz sheet with relevant questions from the question data you've been provided.
 // You can either choose 5 questions from this data to use, or check the bonus objective for a different way to do it.
 // 2) The submit button should return all selected answers.
 // 3) Compare the form data you receive on submit, with the correct answers to generate a correct answers score
@@ -35,3 +35,27 @@
 
 import { questions } from "./questions.js";
 console.log(questions);
+
+// 1. select nodes ** question container and submit button create score variable to 0. select result div.
+
+// ** Outer function to run 5 times related to quiz . length.
+
+// 2. function to generate 5 random questions 5 should be a global variable. so it can change.
+// 2. function should shuffle quiz object then just select first 5 numbers
+// 2. store quiz question objects in a new array.
+
+// 3. function to build nodes.
+// 3. build one ul outside of the loop + attributes
+// 3. function should loop 4 times corresponding to number of questions. build Li, inputs and labels. add attributes. need a unique variable naming system. name attr on input needs to change with loop iteration.
+// 3. start appending elements inside out. this can be done in the for loop.
+// li > input and label
+// ul > li, li ,li, li  this one could be a loop.
+// Outside of for loop - add questions to the question container.
+
+// 4. add event listener ot the submit button. use function checkAnswer.
+
+// 5. function to checkAnswer
+// 5. update result div
+// 5. call quizBuilder function
+
+// 6 when game over notify user
