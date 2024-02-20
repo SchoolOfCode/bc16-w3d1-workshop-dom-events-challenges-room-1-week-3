@@ -18,7 +18,7 @@ Expected Outcomes:
 function openDoor() {
   let randomNum = Math.floor(Math.random() * doorList.length);
   let imageArray = ["door-open-empty.png", "door-open-loz.png"];
-  door.src = `${imageArray[randomNum]}`;
+  doorList.forEach((door) => /* add a random door */)
 }
 
 // 1. get both doors as a node list [node, node]
