@@ -50,7 +50,9 @@ let score = 0;
 const numOfQuestions = 5;
 
 // ** Outer function to run 5 times related to quiz . length.
-//  need to keep track of question count here. in order to select the right question from quizzQuestions.
+//  need to keep track of question count here. in order to select the right question from quizQuestions.
+// we could just build a complete node object.
+let j = 0; // temp (loop) variable
 
 // ** clear all the html nodes uncomment line below when finished **
 // questionContainer.innerHTML = "";
@@ -85,6 +87,9 @@ const quizQuestions = generateQuestions();
 
 // 3. function to build nodes.
 function buildNode() {
+  // ** clears all the html nodes **
+  questionContainer.innerHTML = "";
+
   // build one ul outside of the loop + attributes
   const ulNode = document.createElement("ul");
   ulNode.className = "question__options";
@@ -97,20 +102,31 @@ function buildNode() {
     const inputNode = document.createElement("input");
     const labelNode = document.createElement("label");
 
-    // set the attributes must - don't need an ID
+    // set the input attributes must - don't need an ID
     inputNode.setAttribute("id", `option${i}`);
     inputNode.setAttribute("type", "radio");
-    inputNode.setAttribute("name", "question1");
-    // ****** THIS WONT WORK YET STOPPED HERE FOR NIGHT. 22:18 20th
-    inputNode.setAttribute("value", `quizQ`);
+    inputNode.setAttribute("name", `question0`);
+    // ****** VALUE SET TO OPTION TEXT quizQuestion[0] needs to change
+    inputNode.setAttribute("value", `${quizQuestions[0].options[i]}`);
+
+    // set the label attribute
+    labelNode.setAttribute("for", `option${i}`);
+    labelNode.textContent = `${quizQuestions[0].options[i]}`;
 
     // append children to li node
-
+    liNode.appendChild(inputNode);
+    liNode.appendChild(labelNode);
     // append li to ul node
+    ulNode.appendChild(liNode);
   }
-  //   build Li, inputs and labels. add attributes. need a unique variable naming system. name attr on input needs to change with loop iteration.
+  // this could be added to a node list, then simply use each item
+  // as we cycle through the questions. this would make the nested
+  // loops easier to manage.
+  return ulNode;
 }
+let quizBlock = buildNode();
 
+questionContainer.appendChild(quizBlock);
 // 3. start appending elements inside out. this can be done in the for loop.
 // li > input and label
 // ul > li, li ,li, li  this one could be a loop.
