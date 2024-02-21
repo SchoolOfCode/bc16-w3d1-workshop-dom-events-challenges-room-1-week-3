@@ -20,4 +20,67 @@
 
 import { questions } from "./questions.js";
 
-console.log(questions);
+// creat score variable
+let score = 0;
+let fiveRandomizedQuestions = [];
+// setting variables with selectors quiz container, button and results
+const bodyElement = document.body;
+const questionContainer = document.querySelector(".question__container");
+const submitButton = document.querySelector("button");
+const results = document.querySelector("#result");
+const quizForm = document.querySelector("#quizForm");
+
+// event listener for page load
+
+bodyElement.addEventListener("load", get5Questions());
+
+// event listeners for form submit
+
+quizForm.addEventListener("submit", checkAnswer);
+
+// function to create questions boiler plate
+function displayQuestions(ques) {
+  // loop through all questions 5 questions and display
+  for (let i = 0; i < ques.length; i++) {
+    //   create elements for each questions
+    let questionTitle = document.createElement("div");
+    let questionOptionsList = document.createElement("ul");
+    let options = ques[i].options;
+    // add text and classes
+    questionOptionsList.classList.add("question__options");
+    questionTitle.classList.add("question__title");
+    questionTitle.innerText = ques[i].question;
+    // append elements to correct parent elements
+    questionContainer.appendChild(questionTitle);
+    questionContainer.appendChild(questionOptionsList);
+    // loop through array of answer options
+    options.forEach((option) => {
+      // create element for options
+      let questionOption = document.createElement("li");
+      let optionLabel = document.createElement("label");
+      let optionInput = document.createElement("input");
+      // append elements to correct parents
+      questionOptionsList.appendChild(questionOption);
+      questionOption.appendChild(optionInput);
+      questionOption.appendChild(optionLabel);
+      // add attributes and text
+      optionInput.type = "radio";
+      optionLabel.innerText = `${option}`;
+    });
+  }
+}
+
+// function to get 5 random question
+
+function get5Questions() {
+  fiveRandomizedQuestions.push(
+    questions.sort((a, b) => 0.5 - Math.random()).slice(0, 5)
+  );
+  displayQuestions(fiveRandomizedQuestions[0]);
+}
+
+// function to compare data against answers
+
+function checkAnswer() {}
+
+// function creating the question text, list with input options and a label for those options
