@@ -124,13 +124,9 @@ function buildNode() {
   // loops easier to manage.
   return ulNode;
 }
+// deletes example content and builds quiz
 let quizBlock = buildNode();
-
 questionContainer.appendChild(quizBlock);
-// 3. start appending elements inside out. this can be done in the for loop.
-// li > input and label
-// ul > li, li ,li, li  this one could be a loop.
-// Outside of for loop - add questions to the question container.
 
 // 4. add event listener ot the submit button. use function checkAnswer.
 
